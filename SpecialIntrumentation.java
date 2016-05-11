@@ -95,21 +95,9 @@ public class SpecialIntrumentation {
 
     public static void printUsage()
     {
-        System.out.println("Syntax: java StatisticsTool -stat_type in_path [out_path]");
-        System.out.println("        where stat_type can be:");
-        System.out.println("        static:     static properties");
-        System.out.println("        dynamic:    dynamic properties");
-        System.out.println("        alloc:      memory allocation instructions");
-        System.out.println("        load_store: loads and stores (both field and regular)");
-        System.out.println("        branch:     gathers branch outcome statistics");
-        System.out.println();
-        System.out.println("        in_path:  directory from which the class files are read");
-        System.out.println("        out_path: directory to which the class files are written");
-        System.out.println("        Both in_path and out_path are required unless stat_type is static");
-        System.out.println("        in which case only in_path is required");
+        System.out.println("you need to pass to path: one with the directory of the classes to instrument a the another path for the output files");
         System.exit(-1);
     }
-
     public static void main (String argv[])
     {
         if (argv.length != 2) {
